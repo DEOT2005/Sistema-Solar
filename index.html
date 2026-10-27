@@ -1,0 +1,152 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador del Sistema Solar - Gráfica Computacional</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #1e293b;
+            --accent: #e43f5a;
+            --text-main: #ffffff;
+            --text-sub: #cbd5e1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1f4068, #162447);
+            border-bottom: 4px solid var(--accent);
+        }
+        h1 { margin: 0; font-size: 2.5em; color: var(--accent); }
+        .subtitle { font-size: 1.2em; color: var(--text-sub); margin-top: 10px; }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        h2 { color: #60a5fa; border-bottom: 2px solid #334155; padding-bottom: 10px; }
+        
+        .planets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .planet-box {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        .planet-box h3 { margin-top: 0; color: #f8fafc; }
+        
+        .btn-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .btn-ar {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 18px 35px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(228, 63, 90, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-ar:hover {
+            background-color: #ff4757;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(228, 63, 90, 0.6);
+        }
+        .instructions ol { padding-left: 20px; }
+        .instructions li { margin-bottom: 10px; }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Explorador del Sistema Solar en RA</h1>
+        <div class="subtitle">Proyecto del Segundo Parcial — Gráfica Computacional</div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Información del Sistema -->
+        <div class="card">
+            <h2>📜 Acerca del Proyecto</h2>
+            <p>Este sistema interactivo de Realidad Aumentada (RA) educativo está diseñado para mostrar información astronómica precisa combinando tecnologías web modernas. Su objetivo es acercar conceptos de astronomía mediante modelos 3D interactivos visualizados directamente desde dispositivos móviles.</p>
+        </div>
+
+        <!-- Información de los Planetas (Información Válida requerida) -->
+        <div class="card">
+            <h2>🪐 Datos Clave de los Planetas</h2>
+            <div class="planets-grid">
+                <div class="planet-box">
+                    <h3>🌍 La Tierra</h3>
+                    <p><strong>Distancia al Sol:</strong> 149.6 millones de km</p>
+                    <p><strong>Dato:</strong> El único planeta conocido que alberga vida gracias a su atmósfera rica en oxígeno y agua líquida.</p>
+                </div>
+                <div class="planet-box">
+                    <h3>🔴 Marte</h3>
+                    <p><strong>Distancia al Sol:</strong> 227.9 millones de km</p>
+                    <p><strong>Dato:</strong> Conocido como el "Planeta Rojo" debido al óxido de hierro (herrumbre) que cubre su superficie.</p>
+                </div>
+                <div class="planet-box">
+                    <h3>🟠 Júpiter</h3>
+                    <p><strong>Distancia al Sol:</strong> 778.5 millones de km</p>
+                    <p><strong>Dato:</strong> Es el planeta más grande del sistema solar; un gigante gaseoso con una famosa Gran Mancha Roja.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instrucciones y Lanzador de RA -->
+        <div class="card instructions">
+            <h2>📱 ¿Cómo probar la Realidad Aumentada?</h2>
+            <ol>
+                <li>Prepara el marcador visual estándar (por defecto, utilizaremos el marcador universal <strong>Hiro</strong> o un patrón plano impreso).</li>
+                <li>Haz clic en el botón inferior para abrir la cámara de tu dispositivo móvil.</li>
+                <li>Concede los permisos necesarios para usar la cámara web.</li>
+                <li>Apunta la cámara al marcador y observa los planetas flotando en 3D en tiempo real.</li>
+            </ol>
+            
+            <div class="btn-container">
+                <a href="ar.html" class="btn-ar">🚀 Iniciar Experiencia de Realidad Aumentada</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Materia: Gráfica Computacional | Sistema basado en RA | Fecha de exposición: 23 de Noviembre</p>
+    </footer>
+
+</body>
+</html>
+
